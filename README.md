@@ -1,46 +1,150 @@
-# Getting Started with Create React App
+# My Money
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Badge](https://img.shields.io/badge/Ignite%20Rocketseat-ReactJS-blueviolet)
+![Badge](https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue)
+![Badge](https://img.shields.io/badge/node-%3E%3D%2016.3.0-brightgreen)
 
-## Available Scripts
+> Status do Projeto: :construction: em desenvolvimento
 
-In the project directory, you can run:
+## Tópicos
 
-### `yarn start`
+🔹 [Descrição do projeto](#link-descrição-do-projeto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🔹 [Funcionalidades](#information_source-funcionalidades)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🔹 [Pré-requisitos](#sparkles-pré-requisitos)
 
-### `yarn test`
+🔹 [Como configurar a aplicação](#floppy_disk-iniciar/configurar-banco-de-dados)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔹 [Como rodar a aplicação](#arrow_forward-como-rodar-a-aplicação)
 
-### `yarn build`
+🔹 [Como rodar os testes](#building_construction-como-rodar-os-testes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔹 [Insomnia](#sleeping-insomnia)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔹 [Layout da Aplicação](#scroll-layout-da-aplicação)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔹 [Resolvendo Problemas](#hammer-resolvendo-problemas)
 
-### `yarn eject`
+🔹 [Tarefas em aberto](#pencil-tarefas-em-aberto)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🔹 [Desenvolvedores](#octopus-desenvolvedores)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :link: Descrição do projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<p align="justify">
+  Projeto criado usando a versão 2.4.2 do Yarn.
+</p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :information_source: Funcionalidades
 
-## Learn More
+:heavy_check_mark: Funcionalidade 1  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Funcionalidade 2  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:x: Funcionalidade 3  
+
+:x: Funcionalidade 4
+
+## :sparkles: Pré-requisitos
+
+⚠️ [Node](https://nodejs.org/en/download/)
+
+⚠️ [Yarn 2](https://yarnpkg.com/getting-started/install)
+
+⚠️ [Docker](https://www.docker.com/products/docker-desktop)
+
+⚠️ [PostgreSQL Docker](https://hub.docker.com/_/postgres)
+
+⚠️ [MongoDB Docker](https://hub.docker.com/_/mongo)
+
+⚠️ [Redis Docker](https://hub.docker.com/_/redis)
+
+:exclamation: Para utilizar o Yarn 2, rode o seguinte comando na raiz do seu projeto `yarn dlx @yarnpkg/pnpify --sdk vscode` e configure sua IDE para utilizar o typescript pnpify.
+
+:exclamation: Você precisará seguir os passos a seguir para poder rodar a aplicação na sua máquina.
+
+## :floppy_disk: Iniciar/Configurar banco de dados
+
+Ter Docker e as imagens PostgreSQL, MongoDB e Redis instalados.
+
+### :elephant: Instalar PostgreSQL via Docker
+
+* `docker run --name ecommerceChallengePostgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres`
+* Verificar se a imagem está rodando: `docker ps`
+* Usuário: postgres
+* Senha: docker
+* Acesso pelo terminal: `docker exec -it nome_do_container bash`
+
+### :dolphin: Criar Banco de Dados PostgreSQL
+
+1. Instale o DBeaver, ou outro gerenciador de Banco de Dados, ou faça por linha de comando.
+2. Acesse com o usuário e senha supracitados.
+3. Crie um Banco de Dados com o nome __gostack_desafio09__.
+4. Crie um Banco de Dados com o nome __gostack_desafio09_tests__.
+
+### :four_leaf_clover: Instalar MongoDB via Docker
+
+* `docker run --name ecommerceChallengeMongo -p 27017:27017 -d -t mongo`
+* Verificar se a imagem está rodando: `docker ps`
+* Usuário: postgres
+* Senha: docker
+* Acesso pelo terminal: `docker exec -it nome_do_container bash`
+
+### :file_folder: Instalar Redis via Docker
+
+* `docker run --name ecommerceChallengeRedis -p 6379:6379 -d -t redis:alpine`
+* Verificar se a imagem está rodando: `docker ps
+
+## :arrow_forward: Como rodar a aplicação
+
+Agora navegue até a pasta criada e abra no Visual Studio Code, lembre-se de executar o comando `yarn` dentro da pasta no seu terminal para instalar todas as dependências. Após a instalação digite: `yarn dev:server`.
+
+Pronto! Agora basta acessar a aplicação à partir do link: http://localhost:3333/
+
+## :building_construction: Como rodar os testes
+
+```bash
+yarn test
+```
+
+## :sleeping: Insomnia
+
+Para fazer o download do [insomnia](https://insomnia.rest/download/), para utilizar o mesmo workspace utilizado no projeto clique [aqui](), baixe e importe no seu Insominia.
+
+## :scroll: Layout da Aplicação
+
+Layout a ser seguido no [figma](https://www.figma.com/file/0xmu9mj2TJYoIOubBFWsk5/dtmoney-Ignite-(Copy)?node-id=0%3A1).
+
+> Link do deploy da aplicação. Exemplo com netlify: https://certificates-for-everyone-womakerscode.netlify.app/
+
+Web
+
+<img src="" width="640" heigth="360" />
+
+Mobile
+
+<img src="" width="270" heigth="480" />
+
+## :hammer: Resolvendo Problemas
+
+Caso encontre algum problema, bug ou erro me conte [aqui]()!
+
+## :pencil: Tarefas em aberto
+
+🖊 Tarefa 1
+
+🖊 Tarefa 2
+
+🖊 Tarefa 3
+
+## :octopus: Desenvolvedores
+
+| [<img src="https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4>][(https://github.com/MGustav0](https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4))" width=115><br><sub>Gustavo Moreira</sub>](https://github.com/MGustav0) | [<img src="https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4>][(https://github.com/MGustav0](https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4))" width=115><br><sub>Gustavo Moreira</sub>](https://github.com/MGustav0) |  [<img src="https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4>][(https://github.com/MGustav0](https://avatars1.githubusercontent.com/u/18315899?s=460&u=54d9c6ea66f2b27120bf39dabe1d36ff22a92b9d&v=4))" width=115><br><sub>Gustavo Moreira</sub>](https://github.com/MGustav0) |
+| :---: | :---: | :---:
+
+## :copyright: Licença
+
+The [MIT License](https://opensource.org/licenses/MIT) - Use freely, I am not responsible for the actions of third parties.
+
+©️ Copyright? 2020 - Proffy - Intellectual property does not exist! Copying Is Not Theft.
